@@ -1,0 +1,101 @@
+<GridLayout rows="3*, *, 3*, *, 26*, 4*" class="home-container" marginRight="20"
+    marginLeft="20">
+
+    <GridLayout row="0" columns="*, *, 5*">
+        <GridLayout col="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left">
+            </Image>
+        </GridLayout>
+        <GridLayout col="1"
+        (tap)="navigateToHome()">
+            <Label text="My Graph" class="levels-points"
+            horizontalAlignment="left" verticalAlignment="center">
+            </Label>
+        </GridLayout>
+        <Label col="0" colSpan="3" text="Levels" marginLeft="20"
+            class="home-eloha-font-semibold" horizontalAlignment="center"
+            verticalAlignment="center">
+        </Label>
+    </GridLayout>
+
+    <GridLayout row="1" style="padding-bottom:15">
+        <Label class="line"></Label>
+    </GridLayout>
+
+    <GridLayout row="2" columns="*,*,*">
+        <Gridlayout col="0">
+            <Image src=" ~/images/levels.png" style="height:50%"
+            horizontalAlignment="right">
+            </Image>
+        </Gridlayout>
+        <Gridlayout col="2" (tap)="navigateToLeaderboard()">
+            <Image src=" ~/images/coins.png" style="height:50%"
+            horizontalAlignment="left">
+            </Image>
+        </Gridlayout>
+
+    </GridLayout>
+
+    <GridLayout row="3" style="padding-bottom:15">
+        <Label class="line"></Label>
+    </GridLayout>
+
+    <GridLayout row="4" rows="*, *, *, *, *, *, *, *,*"
+        columns="2*,10*">
+
+        <Button row="0" col="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold levels-button" [text]="'1'">
+        </Button>
+        <Label row="0" col="1" text="2 other players are on Level 1"
+            verticalAlignment="bottom" style="padding-left: 10">
+        </Label>
+
+        <Button row="2" col="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold levels-button" [text]="'2'">
+        </Button>
+        <Label row="2" col="1" text="13 other players are on Level 2"
+            verticalAlignment="bottom" style="padding-left: 10">
+        </Label>
+
+        <Button row="4" col="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold levels-button" [text]="'3'">
+        </Button>
+        <Label row="4" col="1" text="42 other players are on Level 3"
+            verticalAlignment="bottom" style="padding-left: 10">
+        </Label>
+
+        <GridLayout row="6" col="0" (tap)="navigateToLeaderboard()">
+            <Button horizontalAlignment="stretch"
+                class="eloha-font-semibold levels-button" [text]="'4'"
+                (tap)="navigateToLeaderboard()">
+            </Button>
+        </GridLayout>
+        <GridLayout row="6" rows="*,*" col="1"
+            (tap)="navigateToLeaderboard()">
+            <Image src="~/images/levels_winner.png" row="0"
+                horizontalAlignment="left" verticalAlignment="top"
+                (tap)="navigateToLeaderboard()">
+            </Image>
+            <Label row="0" text="Dana" verticalAlignment="bottom"
+                style="padding-left: 25, font-size: 20, font-family: 'Open Sans', 'OpenSans-Bold'"
+                (tap)="navigateToLeaderboard()">
+            </Label>
+            <Label row="1" text="and 248 other players are on Level 4"
+                verticalAlignment="bottom" style="padding-left: 10"
+                (tap)="navigateToLeaderboard()">
+            </Label>
+        </GridLayout>
+
+        <Button row="8" col="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold levels-button" [text]="'5'">
+        </Button>
+        <Label row="8" col="1" text="523 other players are on Level 5"
+            verticalAlignment="bottom" style="padding-left: 10">
+        </Label>
+
+
+    </GridLayout>
+
+</GridLayout>

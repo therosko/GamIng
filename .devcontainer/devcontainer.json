@@ -1,0 +1,17 @@
+{
+    "name": "Sample Visual Studio Code Nativescript devcontainer.json configuration",
+    "image": "scratchy/nativescript-cli:18.04-10.x-6.8.0-29.0.3"
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "remoteUser": "tnsuser",
+    "mounts": [
+        "source=${localWorkspaceFolder}/Cache/.gradle,target=/home/tnsuser/.gradle,type=bind"
+    ],
+    "runArgs": [
+        "--privileged",
+        "-v",
+        "/dev/bus/usb:/dev/bus/usb"
+	"--network=host"
+    ]
+}

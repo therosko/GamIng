@@ -1,0 +1,31 @@
+.home-panel{
+	vertical-align: center;
+	font-size: 20;
+	margin: 15;
+}
+.home-panel{
+	vertical-align: center;
+	font-size: 20;
+	margin: 15;
+}
+.title_duel {
+    font-family: 'Open Sans', 'OpenSans-SemiBold';
+    font-weight: 900 ;
+    text-align: center;
+}
+.nickname_duel {
+    font-family: 'Open Sans', 'OpenSans-Bold';
+    font-weight: 900 ;
+    font-size: 20;
+    color: black
+}
+.total_points {
+    font-family: 'Open Sans', 'OpenSans-Bold';
+    font-weight: 900 ;
+    color: #60B40A ;
+}
+.points {
+    background-color: #60B40A ;
+    font-size: 20 ;
+    color: white ;
+}

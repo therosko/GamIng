@@ -1,0 +1,288 @@
+<ActionBar title="Bottombar" visibility="collapsed">
+</ActionBar>
+
+<GridLayout rows="14*, 4*">
+
+    <!-- Simple Questions -->
+    <GridLayout row="0" rows="3*,2*,*, 3*, 16*"
+        visibility="{{ showSimple ? 'visible' : 'collapsed' }}" width="90%">
+        <!-- Header -->
+        <GridLayout row="0" rows="2*,*" columns="*, 5*" marginTop="10">
+            <GridLayout col="0" row="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+                <Image src=" ~/images/back.png" style="height:50%"
+                    horizontalAlignment="left"verticalAlignment="center">
+                </Image>
+            </GridLayout>
+            <Label row="0" col="0" colSpan="2" text="Exercise" marginLeft="20"
+                class="home-eloha-font-semibold" horizontalAlignment="center"
+                verticalAlignment="center">
+            </Label>
+            <GridLayout row="1" col="0" colSpan="2">
+                <Label class="line"></Label>
+            </GridLayout>
+        </GridLayout>
+
+        <!-- List Picker -->
+        <ListPicker row="1" [items]="listPickerChapters"
+            [(ngModel)]="selectedListPickerIndex" width="80%" class="picker">
+        </ListPicker>
+
+        <!--Line-->
+        <GridLayout row="2">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <!--Progress bar-->
+        <GridLayout row="3" rows="*,*" marginBottom="10" verticalAlignment="center">
+            <GridLayout row="0" backgroundColor="#f2f2f2" height="20"
+                borderRadius="10" margin="5 0">
+                <StackLayout horizontalAlignment="left"
+                    backgroundColor="#B6EB81" height="20" borderRadius="10"
+                    width="45%">
+                </StackLayout>
+                <StackLayout backgroundColor="red" height="20"
+                    borderRadius="10" width="20%">
+                </StackLayout>
+            </GridLayout>
+            <GridLayout row="1" columns="*,*,*">
+                <GridLayout col="0">
+                    <Label text="Correct" horizontalAlignment="left">
+                    </Label>
+                </GridLayout>
+                <GridLayout col="1">
+                    <Label text="Wrong" horizontalAlignment="center">
+                    </Label>
+                </GridLayout>
+                <GridLayout col="2">
+                    <Label text="Unanswered" horizontalAlignment="right">
+                    </Label>
+                </GridLayout>
+            </GridLayout>
+        </GridLayout>
+        <!--Chose Simple Question-->
+        <GridLayout row="4" rows="*,*,*,*,*,*,*" columns="*,10*">
+            <GridLayout row="0" col="0" colSpan="2" columns="6*,*">
+                <Label horizontalAlignment="left" verticalAlignment="center" col="0" textWrap="true" text="Number of questions that I want to do in this exercise">
+                </Label>
+                <Button col="1" class="eloha-font-semibold trial-exam-button" marginBottom="20" marginLeft="0" marginRight="5"
+                horizontalAlignment="stretch"
+                [text]="'5'">
+                </Button>
+            </GridLayout>
+
+            <GridLayout row="1" col="0" backgroundColor="#f2f2f2" height="80"
+                borderRadius="10" margin="5 0" marginBottom="20">
+            </GridLayout>
+            <GridLayout row="1" col="1">
+                <Button marginBottom="20" marginLeft="0" marginRight="5"
+                    horizontalAlignment="stretch"
+                    class="eloha-font-semibold trial-exam-button"
+                    [text]="'Continue with remaining questions'"
+                    (tap)="navigateToSimpleQuestions(0)">
+                </Button>
+            </GridLayout>
+            <Label row="2" col="1" text="Number of Qs and possible coins that you can collect">
+            </Label>
+
+            <GridLayout row="3" col="0" backgroundColor="red" height="80"
+                borderRadius="10" margin="5 0" marginBottom="20">
+            </GridLayout>
+            <GridLayout row="3" col="1">
+                <Button marginBottom="20" marginLeft="0" marginRight="5"
+                    horizontalAlignment="stretch"
+                    class="eloha-font-semibold trial-exam-button"
+                    [text]="'Retake questions with incorrect answers'"
+                    (tap)="navigateToSimpleQuestions(0)">
+                </Button>
+            </GridLayout>
+            <Label row="4" col="1" text="Number of Qs and possible coins that you can collect">
+            </Label>
+
+            <GridLayout row="5" col="0" rows="*,*">
+                <GridLayout row="0" backgroundColor="red" height="40"
+                    borderRadius="10" verticalAlignment="bottom">
+                </GridLayout>
+                <GridLayout row="1" backgroundColor="green" height="40"
+                    borderRadius="10" marginBottom="40"
+                    verticalAlignment="top">
+                </GridLayout>
+            </GridLayout>
+            <GridLayout row="5" col="1">
+                <Button marginBottom="20" marginLeft="0" marginRight="5"
+                    horizontalAlignment="stretch"
+                    class="eloha-font-semibold trial-exam-button"
+                    [text]="'Retake all questions'"
+                    (tap)="navigateToSimpleQuestions(0)">
+                </Button>
+            </GridLayout>
+            <Label row="6" col="1" text="Number of Qs and possible coins that you can collect">
+            </Label>
+        </GridLayout>
+    </GridLayout>
+
+    <!-- Mini Quiz -->
+    <GridLayout row="0" rows="3*,2*,*, 3*, 10*, 3*, 3*"
+        visibility="{{ showMiniQuiz ? 'visible' : 'collapsed' }}" width="90%">
+        <!-- Header -->
+        <GridLayout row="0" rows="2*,*" columns="*, 5*" marginTop="10">
+            <GridLayout col="0" row="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+                <Image src=" ~/images/back.png" style="height:50%"
+                    horizontalAlignment="left"verticalAlignment="center">
+                </Image>
+            </GridLayout>
+            <Label row="0" col="0" colSpan="2" text="Quiz" marginLeft="20"
+                class="home-eloha-font-semibold" horizontalAlignment="center"
+                verticalAlignment="center">
+            </Label>
+            <GridLayout row="1" col="0" colSpan="2">
+                <Label class="line"></Label>
+            </GridLayout>
+        </GridLayout>
+
+        <!-- List Picker -->
+        <ListPicker row="1" [items]="listPickerChapters"
+            [(ngModel)]="selectedListPickerIndex" width="80%" class="picker">
+        </ListPicker>
+
+        <!--Line-->
+        <GridLayout row="2">
+            <Label class="line" verticalAlignment="top"></Label>
+        </GridLayout>
+
+        <GridLayout row="3" col="0" colSpan="2" columns="6*,*">
+            <Label horizontalAlignment="left" verticalAlignment="center" col="0" textWrap="true" text="Number of questions that I want to do in this exercise">
+            </Label>
+            <Button col="1" class="eloha-font-semibold trial-exam-button" marginBottom="20" marginTop="10" marginLeft="0" marginRight="5"
+            horizontalAlignment="stretch"
+            [text]="'5'">
+            </Button>
+        </GridLayout>
+    
+        <Image row="4" src="~/images/mq_graph.png" marginBottom="10">
+        </Image>
+        <GridLayout row="5">
+            <Button marginBottom="20" marginLeft="0" marginRight="5"
+                horizontalAlignment="stretch"
+                class="eloha-font-semibold trial-exam-button"
+                [text]="'Take another exam'" (tap)="navigateToMiniQuiz(0)">
+            </Button>
+        </GridLayout>
+        <GridLayout row="6">
+            <Button marginBottom="20" marginLeft="0" marginRight="5"
+                horizontalAlignment="stretch"
+                class="eloha-font-semibold trial-exam-button"
+                [text]="'Retake a failed exam'" (tap)="navigateToMiniQuiz(0)">
+                <!-- ListPicker should be implemented fully and added to backend -->
+                <ListPicker [items]="listPickerCountries"
+                    [(ngModel)]="selectedListPickerIndex">
+                </ListPicker>
+            </Button>
+        </GridLayout>
+    </GridLayout>
+
+    <!-- BIS Duel -->
+    <GridLayout row="0" rows="3*,2*,*, 19*"
+        visibility="{{ showDuel ? 'visible' : 'collapsed' }}" width="90%">
+        <!-- Header -->
+        <GridLayout row="0" rows="2*,*" columns="*, 5*" marginTop="10">
+            <GridLayout col="0" row="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+                <Image src=" ~/images/back.png" style="height:50%"
+                    horizontalAlignment="left"verticalAlignment="center">
+                </Image>
+            </GridLayout>
+            <Label row="0" col="0" colSpan="2" text="Duel" marginLeft="20"
+                class="home-eloha-font-semibold" horizontalAlignment="center"
+                verticalAlignment="center">
+            </Label>
+            <GridLayout row="1" col="0" colSpan="2">
+                <Label class="line"></Label>
+            </GridLayout>
+        </GridLayout>
+
+        <!-- List Picker -->
+        <ListPicker row="1" [items]="listPickerChapters"
+            [(ngModel)]="selectedListPickerIndex" width="80%" class="picker">
+        </ListPicker>
+
+        <!--Line-->
+        <GridLayout row="2">
+            <Label class="line"></Label>
+        </GridLayout>
+    
+        <GridLayout row="4" rows="4*,3*,4*, 4*, 4*">
+            <GridLayout row="0" rows="*,*,*">
+                <Label row="0" text="Your score:" class="title_duel"
+                    horizontalAlignment="center" marginBottom="5">
+                </Label>
+                <StackLayout row="1" orientation="horizontal"
+                    horizontalAlignment="center" marginBottom="5">
+                    <Label text="10       " horizontalAlignment="left"
+                        class="title_duel" style="color:green">
+                    </Label>
+                    <Label text="    3" horizontalAlignment="right"
+                        class="title_duel" style="color:red">
+                    </Label>
+                </StackLayout>
+                <StackLayout row="2" orientation="horizontal"
+                    horizontalAlignment="center">
+                    <Label text="Win" horizontalAlignment="right"
+                        class="title_duel" style="color:green">
+                    </Label>
+                    <Label text="  /  " horizontalAlignment="center"
+                        class="title_duel">
+                    </Label>
+                    <Label text="Loose" horizontalAlignment="left"
+                        class="title_duel" style="color:red">
+                    </Label>
+                </StackLayout>
+            </GridLayout>
+            <GridLayout row="1" col="0" colSpan="2" columns="6*,*">
+                <Label horizontalAlignment="left" verticalAlignment="center" col="0" textWrap="true" text="Number of questions that I want to do in this exercise">
+                </Label>
+                <Button col="1" class="eloha-font-semibold trial-exam-button" marginBottom="20" marginTop="10" marginLeft="0" marginRight="5"
+                horizontalAlignment="stretch"
+                [text]="'5'">
+                </Button>
+            </GridLayout>
+            <GridLayout row="2">
+                <Button marginBottom="20" marginLeft="0" marginRight="5"
+                    horizontalAlignment="stretch"
+                    class="eloha-font-semibold trial-exam-button"
+                    [text]="'Initiate a New Duel'" (tap)="navigateToBISDuel(0)">
+                </Button>
+            </GridLayout>
+            <GridLayout row="3">
+                <Button marginBottom="20" marginLeft="0" marginRight="5"
+                    horizontalAlignment="stretch"
+                    class="eloha-font-semibold trial-exam-button"
+                    [text]="'Play an Existing Duel'" (tap)="navigateToBISDuel(0)">
+                </Button>
+            </GridLayout>
+            <GridLayout row="4" rows="2*,*", columns="*,*,*">
+                <StackLayout row="0" col="1" orientation="horizontal"
+            verticalAlignment="center" horizontalAlignment="center">
+                    <Image src="~/images/online_people.png" style="height:50%">
+                    </Image>
+                    <Label text="  2" class="online_players">
+                    </Label>
+                </StackLayout>
+                <Label row="1" col="1" text="Online Duelist" horizontalAlignment="center">
+                </Label>
+            </GridLayout>
+
+
+        </GridLayout>
+        
+    </GridLayout>
+
+
+
+
+
+    <BottomBar row="1" (tabSelected)="tabSelected($event)"
+        verticalAlignment="bottom"></BottomBar>
+
+</GridLayout>

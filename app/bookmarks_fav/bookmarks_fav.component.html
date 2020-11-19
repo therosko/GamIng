@@ -1,0 +1,90 @@
+<GridLayout rows="3*,  3*, 16*, 2*" height="100%">
+    <!-- Header -->
+    <GridLayout row="0" rows="2*,*" columns="*, *, 5*" marginRight="20"
+        marginLeft="20" marginTop="10">
+        <GridLayout row="0" col="0" class="home-icon-container"
+            (tap)="navigateToBookmarks()" verticalAlignment="bottom">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left">
+            </Image>
+        </GridLayout>
+        <Image src="~/images/bookmarks.png" col="1"
+            class="home-icon-container" horizontalAlignment="left"
+            verticalAlignment="bottom" marginTop="5">
+        </Image>
+        <Label col="2" text="Bookmarks" marginLeft="20"
+            class="home-eloha-font-semibold" horizontalAlignment="left"
+            verticalAlignment="bottom">
+        </Label>
+        <GridLayout row="1" col="0" colSpan="3">
+            <Label class="line"></Label>
+        </GridLayout>
+    </GridLayout>
+
+
+    <!-- List Picker -->
+    <ListPicker row="1" [items]="listPickerChapters"
+        [(ngModel)]="selectedListPickerIndex" width="80%" class="picker">
+    </ListPicker>
+    <!-- Content -->
+    <GridLayout row="2" columns="5*,*,*" rows="2*,2*,2*,*" width="80%"
+        marginTop="15">
+        <GridLayout row="0" col="0" backgroundColor="#ffffff">
+            <Label
+                text="Ein Istprozessmodell beschreibt einen GeschÃ¤ftsprozess so, wie er aktuell tatsÃ¤chlich von den Prozessteilnehmern a usgefÃ¼hrt wird (Hansen et. al, 2019, S. 111)."
+                textWrap="true" class="bookmark_text">
+            </Label>
+        </GridLayout>
+        <GridLayout row="0" , col="1" marginLeft="15">
+            <Image src="~/images/bookmark.png">
+            </Image>
+        </GridLayout>
+        <GridLayout row="0" , col="2" marginLeft="15">
+            <Image src="~/images/delete.png">
+            </Image>
+        </GridLayout>
+
+        <GridLayout row="1" col="0" backgroundColor="#ffffff" marginTop="10">
+            <Label
+                text="Eine Redesign-Heuristik (engl.: redesign heuristic) beschreibt eine konkrete MaÃnahme zur Umgestaltung eines GeschÃ¤ftsprozesses, die mit der Erwartung einer Verbesserung in zumindest einer Dimension verbunden ist. Resultat ist ein Sollprozessmodell."
+                textWrap="true" class="bookmark_text">
+            </Label>
+        </GridLayout>
+        <GridLayout row="1" , col="1" marginLeft="15">
+            <Image src="~/images/bookmark.png">
+            </Image>
+        </GridLayout>
+        <GridLayout row="1" , col="2" marginLeft="15">
+            <Image src="~/images/delete.png">
+            </Image>
+        </GridLayout>
+
+        <GridLayout row="2" col="0" backgroundColor="#ffffff" marginTop="10">
+            <Label
+                text="Nein, die Aufgabe des Teams ist die Beschreibung des Ablaufs - nicht die Hinterfragung der Therapieentscheidungen. Eventuell wÃ¤re diese Information fÃ¼r die Analyse (Schwachstellenfindung) und die Entwicklung eines Soll-Modells relevant."
+                textWrap="true" class="bookmark_text">
+            </Label>
+        </GridLayout>
+        <GridLayout row="2" , col="1" marginLeft="15">
+            <Image src="~/images/bookmark.png">
+            </Image>
+        </GridLayout>
+        <GridLayout row="2" , col="2" marginLeft="15">
+            <Image src="~/images/delete.png">
+            </Image>
+        </GridLayout>
+    </GridLayout>
+
+    <!-- Footer -->
+    <GridLayout row="3" columns="*,*,*" marginBottom="10">
+        <GridLayout col="0" marginLeft="15">
+            <Image src="~/images/bookmark.png">
+            </Image>
+        </GridLayout>
+        <GridLayout col="2" marginLeft="15">
+            <Image src="~/images/delete.png">
+            </Image>
+        </GridLayout>
+    </GridLayout>
+
+</GridLayout>

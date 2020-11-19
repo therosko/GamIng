@@ -1,0 +1,230 @@
+{
+    "categories": [
+        {
+            "title": "PROGRAMMING",
+            "quizDate": "20 October",
+            "lastScore": "70%",
+            "backgroundColor": "#250046",
+            "image": "~/images/programming.png",
+            "questions": [
+                {
+                    "question": "Welche der folgenden Aussagen ist für Universitäten im Hinblick auf Geschäftsprozesse falsch?",
+                    "options": [
+                        "Da eine Universität keine Produkte produziert, gibt es dort auch keine Geschäftsprozesse.",
+                        "Auch an einer Universität kommt es darauf an, effektiv („die richtigen Dinge tun“) und effizient („die Dinge richtig tun“) zu arbeiten.",
+                        "Geschäftsprozesse sind überall vorhanden, wo arbeitsteilig gearbeitet wird, somit auch an einer Universität.",
+                        "Die technische Weiterentwicklung und die zunehmende Verfügbarkeit neuer Informationstechnologien (z.B. QR-Code, RFID-Chips, Cloud-Computing, Social Media) bietet ständig neue Möglichkeiten bei der Gestaltung von Geschäftsprozessen - auch im Bildungsbereich. Dies betrifft nicht nur die Organisation der Lehre, sondern auch die Lehr- und Lernprozesse selbst."
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "question": "Welche Aussage zum Lebenszyklus des Geschäftsprozessmanagements ist richtig?",
+                    "options": [
+                        "Das Sollmodell des Geschäftsprozesses bildet die Grundlage für die Prozessanalyse.",
+                        "Bei der Prozesserhebung wird ein ausgewählter Geschäftsprozess genauer beschrieben.",
+                        "Die Prozessüberwachung kontrolliert das Geschäftsprozessmanagement.",
+                        "Die Prozessidentifikation zielt darauf ab, ein Referenzmodell zu erstellen."
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "question": "Welche der folgenden Behauptungen zu Geschäftsprozessen ist falsch?",
+                    "options": [
+                        "Wenn man die Erledigung einer betrieblichen Aufgabe anhand der Funktionen eines bestehenden, komplexen Arbeitsablaufs beschreibt, dann spricht man von einem Geschäftsprozess.",
+                        "Betriebliche Funktionen, die zu einem betriebswirtschaftlichen Ziel beitragen, stehen in einem zeitlichen und sachlogischen Zusammenhang zueinander.",
+                        "Zuständigkeiten für Geschäftsprozesse werden typischerweise explizit als Teil der Ablauforganisation definiert.",
+                        "Typischerweise sind Geschäftsprozesse in einem Betrieb arbeitsteilig organisiert und weisen daher als ein typisches Merkmal Funktionen aus verschiedenen betrieblichen Bereichen auf."
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "question": "Welche Aussage zum Begriff und Wesen von Geschäftsprozessmanagement ist falsch?",
+                    "options": [
+                        "Eine Prozesslandkarte bildet die wichtigsten Prozesse eines Betriebes in einer graphisch übersichtlichen Form dar.",
+                        "Wenn existierende Prozesse erhoben werden, so sind die einzelnen Verarbeitungsschritte und die Verarbeitungslogik im Mittelpunkt der Analyse, die zum sogenannten Istmodell führen.",
+                        "Der Lebenszyklus eines Geschäftsprozesses ringförmig ist: Prozessidentifikation -> Prozesserhebung -> Prozessanalyse -> Prozessverbesserung -> Prozesseinführung -> Prozessüberwachung -> Prozesserhebung usw.",
+                        "Der Lebenszyklus eines Geschäftsprozesses ringförmig ist: Prozessidentifikation ->Prozessverbesserung -> Prozesseinführung -> Prozessanalyse -> Prozessüberwachung -> Prozesserhebung -> Prozessverbesserung usw."
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "question": "Welche der folgenden Aussagen wäre nicht relevant für die Erstellung eines Ist-Prozessmodells für die „PatientInnen-Registrierung und Therapieverordnung“ in einem orthopädischen Rehabilitationszentrum?",
+                    "options": [
+                        "Der Leiter des Instituts Dr. Hans G. beschreibt in groben Zügen, wie bei der Zusammenstellung einer patienten-individuellen Therapie vorgegangen wird.",
+                        "Die Ferialpraktikantin am Anmeldeschalter beschreibt im Detail, wie bei der Registrierung der PatientInnen vorgegangen wird und welche Unterlagen dafür benötigt werden.",
+                        "Die Mitarbeiterin am Anmeldeschalter Kathrin K. beschreibt, wie, in welcher Form und wann die Informationen über die verordnete Therapie vom Rehab-Zentrum an die Krankenkasse gemeldet werden müssen.",
+                        "Die Patientin Eulalia N. beschreibt, wie ihre Wunschtherapie aussehen sollte, da sie – mangels medizinischem Erfolg - statt der verordneten Ultraschall-Therapie lieber eine andere Therapie hätte."
+                    ],
+                    "correctAnswerIndex": 3
+                }
+            ]
+        },
+        {
+            "title": "NETWORKING",
+            "quizDate": "20 October",
+            "lastScore": "70%",
+            "backgroundColor": "#0D0735",
+            "image": "~/images/networking.png",
+            "questions": [
+                {
+                    "question": "How long is an IPv6 address?",
+                    "options": [
+                        "32 bits",
+                        "128 bytes",
+                        "64 bits",
+                        "128 bits"
+                    ],
+                    "correctAnswerIndex": 3
+                }
+            ]
+        },
+        {
+            "title": "SECURITY",
+            "quizDate": "20 October",
+            "lastScore": "70%",
+            "backgroundColor": "#020046",
+            "image": "~/images/security.png",
+            "questions": [
+                {
+                    "question": "Which command would you use to apply an access list to a router interface?",
+                    "options": [
+                        "ip access-list 101 out",
+                        "access-list ip 101 in",
+                        "ip access-group 101 in",
+                        "access-group ip 101 in"
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "question": "What command will permit SMTP mail to only host 1.1.1.1?",
+                    "options": [
+                        "access-list 10 permit smtp host 1.1.1.1",
+                        "access-list 110 permit ip smtp host 1.1.1.1",
+                        "access-list 10 permit tcp any host 1.1.1.1 eq smtp",
+                        "access-list 110 permit tcp any host 1.1.1.1 eq smtp"
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "question": "Which router command allows you to view the entire contents of all access lists?",
+                    "options": [
+                        "Router# show interface",
+                        "Router> show ip interface",
+                        "Router# show access-lists",
+                        "Router> show all access-lists"
+                    ],
+                    "correctAnswerIndex": 2
+                }
+            ]
+        },
+        {
+            "title": "Chapter 3",
+            "quizDate": "20 October",
+            "lastScore": "70%",
+            "backgroundColor": "#250046",
+            "image": "~/images/programming.png",
+            "questions": [
+                {
+                    "question": "Welche der folgenden Aussagen ist für Universitäten im Hinblick auf Geschäftsprozesse falsch?",
+                    "options": [
+                        "Da eine Universität keine Produkte produziert, gibt es dort auch keine Geschäftsprozesse.",
+                        "Auch an einer Universität kommt es darauf an, effektiv („die richtigen Dinge tun“) und effizient („die Dinge richtig tun“) zu arbeiten.",
+                        "Geschäftsprozesse sind überall vorhanden, wo arbeitsteilig gearbeitet wird, somit auch an einer Universität.",
+                        "Die technische Weiterentwicklung und die zunehmende Verfügbarkeit neuer Informationstechnologien (z.B. QR-Code, RFID-Chips, Cloud-Computing, Social Media) bietet ständig neue Möglichkeiten bei der Gestaltung von Geschäftsprozessen - auch im Bildungsbereich. Dies betrifft nicht nur die Organisation der Lehre, sondern auch die Lehr- und Lernprozesse selbst."
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "question": "Welche Aussage zum Lebenszyklus des Geschäftsprozessmanagements ist richtig?",
+                    "options": [
+                        "Das Sollmodell des Geschäftsprozesses bildet die Grundlage für die Prozessanalyse.",
+                        "Bei der Prozesserhebung wird ein ausgewählter Geschäftsprozess genauer beschrieben.",
+                        "Die Prozessüberwachung kontrolliert das Geschäftsprozessmanagement.",
+                        "Die Prozessidentifikation zielt darauf ab, ein Referenzmodell zu erstellen."
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "question": "Welche der folgenden Behauptungen zu Geschäftsprozessen ist falsch?",
+                    "options": [
+                        "Wenn man die Erledigung einer betrieblichen Aufgabe anhand der Funktionen eines bestehenden, komplexen Arbeitsablaufs beschreibt, dann spricht man von einem Geschäftsprozess.",
+                        "Betriebliche Funktionen, die zu einem betriebswirtschaftlichen Ziel beitragen, stehen in einem zeitlichen und sachlogischen Zusammenhang zueinander.",
+                        "Zuständigkeiten für Geschäftsprozesse werden typischerweise explizit als Teil der Ablauforganisation definiert.",
+                        "Typischerweise sind Geschäftsprozesse in einem Betrieb arbeitsteilig organisiert und weisen daher als ein typisches Merkmal Funktionen aus verschiedenen betrieblichen Bereichen auf."
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "question": "Welche Aussage zum Begriff und Wesen von Geschäftsprozessmanagement ist falsch?",
+                    "options": [
+                        "Eine Prozesslandkarte bildet die wichtigsten Prozesse eines Betriebes in einer graphisch übersichtlichen Form dar.",
+                        "Wenn existierende Prozesse erhoben werden, so sind die einzelnen Verarbeitungsschritte und die Verarbeitungslogik im Mittelpunkt der Analyse, die zum sogenannten Istmodell führen.",
+                        "Der Lebenszyklus eines Geschäftsprozesses ringförmig ist: Prozessidentifikation -> Prozesserhebung -> Prozessanalyse -> Prozessverbesserung -> Prozesseinführung -> Prozessüberwachung -> Prozesserhebung usw.",
+                        "Der Lebenszyklus eines Geschäftsprozesses ringförmig ist: Prozessidentifikation ->Prozessverbesserung -> Prozesseinführung -> Prozessanalyse -> Prozessüberwachung -> Prozesserhebung -> Prozessverbesserung usw."
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "question": "Welche Aussage zum Begriff und Wesen von Verantwortlichkeiten im Geschäftsprozessmanagement ist falsch?",
+                    "options": [
+                        "Die Geschäftsführung ist grundsätzlich für die Gestaltung der Geschäftsprozesse verantwortlich und sichert die dafür notwendigen Ressourcen.",
+                        "Betriebliche Informationssysteme werden von den Anwendungsentwicklern gemeinsam mit Systemanalytikern für die korrekte Umsetzung (Programmierung) der Prozessvorgaben erstellt.",
+                        "Systemanalytiker sind für die Effizienz und Wirtschaftlichkeit der Systemprozesse im Geschäftsprozessmanagement verantwortlich.",
+                        "Mitarbeiter eines Betriebes, die mit der täglichen Ausführung von Prozessen und der darin umzusetzenden Aufgaben beschäftigt sind, werden auch als Prozessteilnehmer bezeichnet."
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "question": "Welche der folgenden Aussagen zu Geschäftsprozessmanagementsystemen ist falsch?",
+                    "options": [
+                        "Werkzeuge des Process-Mining bieten Analysetechniken, um mithilfe von Logdaten Einsichten in die Ausführung von Prozessen zu erlangen.",
+                        "Robotergesteuerte Prozessautomatisierung erfolgt mithilfe von Industrierobotern, die physische Arbeit verrichten.",
+                        "Digitale Zwillinge sind digitale Abbilder von Produkten und Prozessen, welche unter anderem Analysezwecken dienen.",
+                        "Strukturierte Workflowsysteme verwenden normative Prozessmodelle, um Geschäftsfälle abzuarbeiten."
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "question": "Welche der folgenden Behauptungen zu Geschäftsprozessen ist falsch?",
+                    "options": [
+                        "Wenn man die Erledigung einer betrieblichen Aufgabe anhand der Funktionen eines bestehenden, komplexen Arbeitsablaufs beschreibt, dann spricht man von einem Geschäftsprozess.",
+                        "Betriebliche Funktionen, die zu einem betriebswirtschaftlichen Ziel beitragen, stehen in einem zeitlichen und sachlogischen Zusammenhang zueinander.",
+                        "Zuständigkeiten für Geschäftsprozesse werden typischerweise explizit als Teil der Ablauforganisation definiert.",
+                        "Typischerweise sind Geschäftsprozesse in einem Betrieb arbeitsteilig organisiert und weisen daher als ein typisches Merkmal Funktionen aus verschiedenen betrieblichen Bereichen auf."
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "question": "Welche Aussage zum Begriff und Wesen von Geschäftsprozessmanagement ist falsch?",
+                    "options": [
+                        "Eine Prozesslandkarte bildet die wichtigsten Prozesse eines Betriebes in einer graphisch übersichtlichen Form dar.",
+                        "Wenn existierende Prozesse erhoben werden, so sind die einzelnen Verarbeitungsschritte und die Verarbeitungslogik im Mittelpunkt der Analyse, die zum sogenannten Istmodell führen.",
+                        "Der Lebenszyklus eines Geschäftsprozesses ringförmig ist: Prozessidentifikation -> Prozesserhebung -> Prozessanalyse -> Prozessverbesserung -> Prozesseinführung -> Prozessüberwachung -> Prozesserhebung usw.",
+                        "Der Lebenszyklus eines Geschäftsprozesses ringförmig ist: Prozessidentifikation ->Prozessverbesserung -> Prozesseinführung -> Prozessanalyse -> Prozessüberwachung -> Prozesserhebung -> Prozessverbesserung usw."
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "question": "Welche Aussage zum Begriff und Wesen von Verantwortlichkeiten im Geschäftsprozessmanagement ist falsch?",
+                    "options": [
+                        "Die Geschäftsführung ist grundsätzlich für die Gestaltung der Geschäftsprozesse verantwortlich und sichert die dafür notwendigen Ressourcen.",
+                        "Betriebliche Informationssysteme werden von den Anwendungsentwicklern gemeinsam mit Systemanalytikern für die korrekte Umsetzung (Programmierung) der Prozessvorgaben erstellt.",
+                        "Systemanalytiker sind für die Effizienz und Wirtschaftlichkeit der Systemprozesse im Geschäftsprozessmanagement verantwortlich.",
+                        "Mitarbeiter eines Betriebes, die mit der täglichen Ausführung von Prozessen und der darin umzusetzenden Aufgaben beschäftigt sind, werden auch als Prozessteilnehmer bezeichnet."
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "question": "Welche der folgenden Aussagen zu Geschäftsprozessmanagementsystemen ist falsch?",
+                    "options": [
+                        "Werkzeuge des Process-Mining bieten Analysetechniken, um mithilfe von Logdaten Einsichten in die Ausführung von Prozessen zu erlangen.",
+                        "Robotergesteuerte Prozessautomatisierung erfolgt mithilfe von Industrierobotern, die physische Arbeit verrichten.",
+                        "Digitale Zwillinge sind digitale Abbilder von Produkten und Prozessen, welche unter anderem Analysezwecken dienen.",
+                        "Strukturierte Workflowsysteme verwenden normative Prozessmodelle, um Geschäftsfälle abzuarbeiten."
+                    ],
+                    "correctAnswerIndex": 1
+                }
+            ]
+        }
+    ]
+}

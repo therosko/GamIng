@@ -1,0 +1,95 @@
+<GridLayout rows="4*, *, 32*" class="home-container" marginRight="20"
+    marginLeft="20">
+
+    <GridLayout row="0" columns="*, *, 5*">
+        <GridLayout col="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left">
+            </Image>
+        </GridLayout>
+        <GridLayout col="1">
+            <Image src="~/images/recommendations.png" 
+            class="home-icon-container" horizontalAlignment="left">
+            </Image>
+        </GridLayout>
+        <Label col="2" text="Recommendations"
+            class="home-eloha-font-semibold" horizontalAlignment="left" verticalAlignment="center">
+        </Label>
+    </GridLayout>
+
+    <GridLayout row="1">
+        <Label class="line"></Label>
+    </GridLayout>
+
+    <GridLayout row="2" rows="2*, 3*, 2*, 3*, 2*, 3*, 2*, 3*, 3*"
+        columns="*,*,*">
+        <Label row="0" col="0" colSpan="3"
+            text="2.The role of BIS on the way towards an information society"
+            class="recommendations-bold"
+            style="color: #E51401">
+        </Label>
+        <Button row="1" col="0" text="Revise the book and slides"
+            class="eloha-font-semibold trial-exam-button" textWrap="true"
+            marginRight="10">
+        </Button>
+        <Button row="1" col="1" text="Revise your bookmarks"
+            (tap)="navigateToBookmarks()"
+            class="eloha-font-semibold trial-exam-button" textWrap="true"
+            marginRight="10">
+        </Button>
+        <Button row="1" col="2" text="Practice Simple Questions"
+            (tap)="navigateToSelectionPage()"
+            class="eloha-font-semibold trial-exam-button" textWrap="true">
+        </Button>
+
+        <Label row="2" col="0" colSpan="3"
+            text="6.Outward information systems (IS) and electronic commerce"
+            class="recommendations-bold"
+            style="color: #E51401">
+        </Label>
+        <Button row="3" col="0" text="Revise the book and slides"
+            class="eloha-font-semibold trial-exam-button" textWrap="true"
+            marginRight="10">
+        </Button>
+        <Button row="3" col="1" text="Revise your bookmarks"
+            (tap)="navigateToBookmarks()"
+            class="eloha-font-semibold trial-exam-button" textWrap="true"
+            marginRight="10">
+        </Button>
+        <Button row="3" col="2" text="Practice Simple Questions"
+            (tap)="navigateToSelectionPage()"
+            class="eloha-font-semibold trial-exam-button" textWrap="true">
+        </Button>
+
+        <Label row="4" col="0" colSpan="3"
+            text="8.Planning, development and management of IS"
+            class="recommendations-bold"
+            style="color: #E51401">
+        </Label>
+        <Button row="5" col="0" text="Revise the book and slides"
+            class="eloha-font-semibold trial-exam-button" textWrap="true"
+            marginRight="10">
+        </Button>
+        <Button row="5" col="1" text="Practice Simple Questions"
+            (tap)="navigateToSelectionPage()"
+            class="eloha-font-semibold trial-exam-button" textWrap="true">
+        </Button>
+
+        <Label row="6" col="0" colSpan="3"
+            text="3.Business Process Management" class="recommendations-bold"
+            style="color: #FDE541">
+        </Label>
+        <Button row="7" col="0" text="Practice Simple Questions"
+            (tap)="navigateToSelectionPage()"
+            class="eloha-font-semibold trial-exam-button" textWrap="true"
+            marginRight="10">
+        </Button>
+        <Button row="7" col="1" text="Take a Mini Quiz"
+            (tab)="navigateToMiniQuiz(1)"
+            class="eloha-font-semibold trial-exam-button" textWrap="true">
+        </Button>
+
+    </GridLayout>
+
+</GridLayout>

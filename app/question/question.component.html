@@ -1,0 +1,136 @@
+<GridLayout rows="6*, *">
+    <GridLayout row="0" rows="3*, *, 2*, *, 20* ">
+        <!-- Header -->
+        <GridLayout row="0" rows="2*,*" columns="*, 2*, 5*, *" marginRight="20"
+            marginLeft="20" marginTop="10">
+            <Label col="0" colSpan="4" text="Question Types" marginLeft="20"
+                class="home-eloha-font-semibold" horizontalAlignment="center"
+                verticalAlignment="bottom">
+            </Label>
+        </GridLayout>
+
+        <GridLayout row="1" style="padding-bottom:15">
+            <Label class="line"></Label>
+        </GridLayout>
+    
+        <!-- List Picker -->
+        <ListPicker row="2" [items]="listPickerChapters"
+            [(ngModel)]="selectedListPickerIndex" width="80%" class="picker">
+        </ListPicker>
+
+        <!--Line-->
+        <GridLayout row="3" col="0" colSpan="3">
+            <Label class="line" verticalAlignment="top"></Label>
+        </GridLayout>
+
+<!-- Fix navigation to individual pages in the end -->
+        <GridLayout row="4" rows="4*, *, 4*, *, 4*, *, 4*">
+            <!--SQ/Excercise-->
+            <GridLayout row="0" rows="*, 3*" columns="*, 5*, *, *" (tap)="navigateToSelectionPage()" marginRight="20"
+            marginLeft="20" marginTop="10">
+                <Label row="0" col="1" text="Exercise" class="home-eloha-font-semibold" horizontalAlignment="left" verticalAlignment="bottom">
+                </Label>
+                <Image row="0" col="2" src="~/images/back.png" scaleX="-1" horizontalAlignment="right" verticalAlignment="bottom">
+                </Image>
+                <Label row="1" col="1" colSpan="3" verticalAlignment="center" horizontalAlignment="left" textWrap="true" text="You have unlimited time to answer the questions. You will immediately receive the solution to each question and relevant feedback">
+                </Label>
+            </GridLayout>
+            <GridLayout row="1">
+                <Label class="line"></Label>
+            </GridLayout>
+            <!--MiniQuiz-->
+            <GridLayout row="2" rows="*, 3*" columns="*, 5*, *, *" (tap)="navigateToSelectionPage()" marginRight="20"
+            marginLeft="20" marginTop="10">
+                <Label row="0" col="1" text="Quiz" class="home-eloha-font-semibold" horizontalAlignment="left" verticalAlignment="bottom">
+                </Label>
+                <Image row="0" col="2" src="~/images/back.png" scaleX="-1" horizontalAlignment="right" verticalAlignment="bottom">
+                </Image>
+                <Label row="1" col="1" colSpan="3" verticalAlignment="center" horizontalAlignment="left" textWrap="true" text="You have limited time to answer the questions. You will receive the solutions to the questions in the end of the quiz.">
+                </Label>
+            </GridLayout>
+            <GridLayout row="3">
+                <Label class="line"></Label>
+            </GridLayout>
+            <!--Duel-->
+            <GridLayout row="4" rows="*, 3*" columns="*, 5*, *, *" (tap)="navigateToSelectionPage()" marginRight="20"
+            marginLeft="20" marginTop="10">
+                <Label row="0" col="1" text="Duel" class="home-eloha-font-semibold" horizontalAlignment="left" verticalAlignment="bottom">
+                </Label>
+                <Image row="0" col="2" src="~/images/back.png" scaleX="-1" horizontalAlignment="right" verticalAlignment="bottom">
+                </Image>
+                <Label row="1" col="1" colSpan="3" verticalAlignment="center" horizontalAlignment="left" textWrap="true" text="You initiate a Duel includion a question catalog and compete with another player. You can duel with online or offline players.">
+                </Label>
+            </GridLayout>
+            <GridLayout row="5">
+                <Label class="line"></Label>
+            </GridLayout>
+            <!--Exam-->
+            <GridLayout row="6" rows="*, 3*" columns="*, 5*, *, *" (tap)="navigateToSelectionPage()" marginRight="20"
+            marginLeft="20" marginTop="10">
+                <Label row="0" col="1" text="Exam" class="home-eloha-font-semibold" horizontalAlignment="left" verticalAlignment="bottom">
+                </Label>
+                <Image row="0" col="2" src="~/images/back.png" scaleX="-1" horizontalAlignment="right" verticalAlignment="bottom">
+                </Image>
+                <Label row="1" col="1" colSpan="3" verticalAlignment="center" horizontalAlignment="left" textWrap="true" text="You have the chance to do 3 exams. You must have collected at least 120 points.">
+                </Label>
+            </GridLayout>
+            
+        </GridLayout>
+  
+    </GridLayout>
+
+
+
+    <!-- Bootom Selection same as bookmarks-->
+    <GridLayout row="1" rows="*, 7*, 3*">
+        <GridLayout row="0">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <GridLayout row="1" columns="*,*,*,*,*">
+            <GridLayout col="0" class="home-icon-container"
+                (tap)="navigateToHome()" verticalAlignment="top">
+                <Image src="~/images/mygraph.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="1" class="home-icon-container" (tap)="navigateToBookmarks()" verticalAlignment="top">
+                <Image src="~/images/book.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="2" class="home-icon-container"
+                (tap)="navigateToRecommendations()" verticalAlignment="top">
+                <Image src="~/images/recommendations.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="3" class="home-icon-container" verticalAlignment="top">
+                <Image src="~/images/question_page.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="4" class="home-icon-container"
+                (tap)="navigateToSetting()" verticalAlignment="top">
+                <Image src="~/images/settings.png">
+                </Image>
+            </GridLayout>
+        </GridLayout>
+
+        <GridLayout row="2" columns="*,*,*,*,*">
+            <Label col="0" text="My Graph"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="1" text="Bookmark"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="2" text="Advice"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="3" text="Question"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="4" text="Settings"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+        </GridLayout>
+
+    </GridLayout>
+
+</GridLayout>

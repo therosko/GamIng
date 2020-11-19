@@ -1,0 +1,12 @@
+.online_players {
+    font-family: 'Open Sans', 'OpenSans-Bold';
+    font-weight: 900 ;
+    color: #71dd31
+}
+.titles {
+    font-family: 'Open Sans', 'OpenSans-Regular';
+    font-weight: 900 ;
+}
+:disabled {
+  opacity: 0.5;
+}

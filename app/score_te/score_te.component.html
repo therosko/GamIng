@@ -1,0 +1,60 @@
+<GridLayout rows="3*, *, 4*, *, 3*, 15*, 2*" height="95%"
+    verticalAlignment="top">
+    <GridLayout row="0" columns="*, 5*" marginTop="10">
+        <GridLayout col="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left" marginLeft="10">
+            </Image>
+        </GridLayout>
+        <GridLayout col="1" verticalAlignment="center"
+            horizontalAlignment="left">
+            <Label text="Performance Graph" class="title_duel">
+            </Label>
+        </GridLayout>
+    </GridLayout>
+
+    <!--Line-->
+    <GridLayout row="1" marginBottom="20">
+        <Label class="line"></Label>
+    </GridLayout>
+
+    <!-- Points  -->
+    <GridLayout row="2" columns="*,4*,*,4*,*" rows="2*, 3*">
+        <Label row="0" col="1" colSpan="5"
+            text="Well done! You got 3 questions correct!"
+            style="color:#60B40A" verticalAlignment="top">
+        </Label>
+        <Label row="1" col="1" text="  + 7 Correct" backgroundColor="#60B40A"
+            style="color:white" marginBottom="5" marginLeft="8%">
+        </Label>
+        <Label row=1 col="3" text="  + 5 Passed  " backgroundColor="#60B40A"
+            style="color:white" marginBottom="5" marginRight="10%">
+        </Label>
+    </GridLayout>
+
+    <!--Line-->
+    <GridLayout row="3" marginBottom="20">
+        <Label class="line"></Label>
+    </GridLayout>
+
+    <GridLayout row="4" width="80%" marginBottom="20">
+        <Label text="Your total points:   99" class="total_points"
+            style="color:#60B40A" verticalAlignment="top">
+        </Label>
+    </GridLayout>
+
+    <GridLayout row="5" col="0" colSpan="2" width="80%"
+        verticalAlignment="stretch">
+        <Image src="~/images/graph.png">
+        </Image>
+    </GridLayout>
+
+    <GridLayout row="6" height="20%" width="50%" marginTop="30"
+        horizontalAlignment="right" marginRight="15%">
+        <Button marginBottom="10" marginLeft="5" horizontalAlignment="right"
+            class="eloha-font-semibold mq-pg-button" [text]="'Done'"
+            (tap)="navigateToHome()">
+        </Button>
+    </GridLayout>
+</GridLayout>

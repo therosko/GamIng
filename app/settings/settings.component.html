@@ -1,0 +1,93 @@
+<GridLayout rows="3*, *, 32*, 3*" class="home-container" marginRight="20"
+    marginLeft="20">
+    <GridLayout row="0" columns="*, *, 5*">
+        <GridLayout col="0" class="home-icon-container" (tap)="navigateToHome()">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left" verticalAlignment="bottom">
+            </Image>
+        </GridLayout>
+        <GridLayout col="1" (tap)="navigateToHome()">
+            <Image src="~/images/settings.png" class="home-icon-container"
+            horizontalAlignment="left" verticalAlignment="bottom"
+            marginTop="10">
+            </Image>
+        </GridLayout>
+        <Label col="2" text="Settings" marginLeft="20"
+            class="home-eloha-font-semibold" horizontalAlignment="left"
+            verticalAlignment="bottom">
+        </Label>
+    </GridLayout>
+    <GridLayout row="1">
+        <Label class="line"></Label>
+    </GridLayout>
+    <GridLayout row="2" rows="2*,2*,2*,2*" marginTop="5">
+        <GridLayout row="0" rows="*,*,*,*" columns="5*,*">
+            <Label row="0" col="0" text="General" class="settings-title-bold">
+            </Label>
+            <Label row="1" col="0" text="Sound effects"
+                class="settings-text-light">
+            </Label>
+            <Switch row="1" col="1" horizontalAlignment="left"
+                verticalAlignment="center" checked="true"></Switch>
+            <Label row="2" col="0" text="Motivational messages"
+                class="settings-text-light">
+            </Label>
+            <Switch row="2" col="1" horizontalAlignment="left"
+                verticalAlignment="center" checked="false"></Switch>
+        </GridLayout>
+        <GridLayout row=" 1" rows="*,*,*,*" columns="5*,*">
+            <Label row="0" col="0" text="Notifications"
+                class="settings-title-bold">
+            </Label>
+            <Label row="1" col="0" text="Reminder"
+                class="settings-text-light">
+            </Label>
+            <Switch row="1" col="1" checked="true"></Switch>
+            <Label row="2" col="0" text="Duel call"
+                class="settings-text-light">
+            </Label>
+            <Switch row="2" col="1" checked="false"></Switch>
+            <Label row="3" col="0" text="Duel results"
+                class="settings-text-light">
+            </Label>
+            <Switch row="3" col="1" checked="false"></Switch>
+        </GridLayout>
+
+        <GridLayout row="2" rows="*,*" columns="3*,*, 3*">
+            <Label row="0" col="0" text="Set a goal"
+                class="settings-title-bold" verticalAlignment="bottom">
+            </Label>
+            <ListPicker row="1" col="0" [items]="listPickerFrequency"
+                [(ngModel)]="selectedListPickerIndex"></ListPicker>
+            <ListPicker row="1" col="2" [items]="listPickerUnit"
+                [(ngModel)]="selectedListPickerIndex_2"></ListPicker>
+        </GridLayout>
+        <GridLayout row="3" columns="5*,3*" marginTop="20">
+            <GridLayout col="0" row="0" rows="*,*" marginRight="10"
+                [ngClass]="{'input-field-error': hasNicknameErrors()}">
+                <TextField #nickname row="0" style="height: 33%"
+                    class="login-password-field nickname-input-container"
+                    hint="Nickname" android:style="padding-left: 10"
+                    verticalAlignment="top" [(ngModel)]="user.nickname"
+                    (focus)="onNicknameFocus()">
+                </TextField>
+                <Label *ngIf="hasNicknameErrors()" row="1"
+                    class="eloha-font-semibold m-t-2 login-field-label color-danger"
+                    [text]="getNicknameError()"
+                    [ngClass]="{'font-size-md': !isTablet(), 'font-size-md-tablet': isTablet()}">
+                </Label>
+            </GridLayout>
+            <Button col="1" row="0" style="height: 33%"
+                verticalAlignment="top"
+                class="eloha-font-semibold change-nickname" [text]="'Change'"
+                (tap)="confirmNickname()">
+            </Button>
+        </GridLayout>
+    </GridLayout>
+    <GridLayout row="3" class="icon-container" horizontalAlignment="right"
+        verticalAlignment="bottom" (tap)="whatIsWhat()">
+        <!--How to login-->
+        <Image src="~/images/question.png" marginRight='15' marginBottom="15">
+        </Image>
+    </GridLayout>
+</GridLayout>

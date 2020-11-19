@@ -1,0 +1,79 @@
+<GridLayout rows="4*, 3*, 2*, 10*, 2*, 3*, 5*" height="80%"
+    verticalAlignment="top">
+    <GridLayout row="0" columns="*, 5*" marginTop="10">
+        <GridLayout col="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left" marginLeft="10">
+            </Image>
+        </GridLayout>
+        <GridLayout col="1" verticalAlignment="center"
+            horizontalAlignment="left">
+            <Label text="Performance Graph" class="title_duel">
+            </Label>
+        </GridLayout>
+    </GridLayout>
+    <GridLayout row="1" rows="*,*" columns="*,*" verticalAlignment="top">
+        <GridLayout row="0" col="0">
+            <Image src=" ~/images/winner.png" style="height:60%"
+                horizontalAlignment="center">
+            </Image>
+        </GridLayout>
+        <GridLayout row="1" col="0">
+            <Label text="John Doe" class="nickname_duel"
+                horizontalAlignment="center">
+            </Label>
+        </GridLayout>
+        <GridLayout row="1" col="1">
+            <Label text="Player2" class="nickname_duel"
+                horizontalAlignment="center">
+            </Label>
+        </GridLayout>
+    </GridLayout>
+
+    <!--Line-->
+    <GridLayout row="2" marginBottom="20">
+        <Label class="line"></Label>
+    </GridLayout>
+
+    <!-- Points  -->
+    <GridLayout row="3" rows="*,*,*" columns="10*,*,10*" width="80%">
+        <Label row="0" col="0" text="  + 5 Correct" backgroundColor="#60B40A"
+            style="color:white" marginBottom="5">
+        </Label>
+        <Label row="1" col="0" text="  + 5 Winner  " backgroundColor="#60B40A"
+            style="color:white" marginBottom="5">
+        </Label>
+        <Label row="2" col="0" text="  + 1 Time  " backgroundColor="#60B40A"
+            style="color:white" marginBottom="5">
+        </Label>
+        <GridLayout col="1">
+
+        </GridLayout>
+        <Label row="0" col="2" text="  + 3 Correct  "
+            backgroundColor="#60B40A" style="color:white" marginBottom="5">
+        </Label>
+        <Label row="1" col="2" text="  + 2 Time  " backgroundColor="#60B40A"
+            style="color:white" marginBottom="5">
+        </Label>
+    </GridLayout>
+
+    <!--Line-->
+    <GridLayout row="4" marginBottom="20">
+        <Label class="line"></Label>
+    </GridLayout>
+
+    <GridLayout row="5" width="80%" marginBottom="20">
+        <Label text="Your total points:   99" class="total_points">
+        </Label>
+    </GridLayout>
+ 
+    <GridLayout row="6" height="20%" width="80%"
+        marginTop="30">
+        <Button marginBottom="10" marginLeft="5" marginRight="5"
+            horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button"
+            [text]="'Play another BIS Duel'" (tap)="navigateToChapter()">
+        </Button>
+    </GridLayout>
+</GridLayout>

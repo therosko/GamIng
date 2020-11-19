@@ -1,0 +1,100 @@
+<GridLayout rows="*, 7*" verticalAlignment="top" [isEnabled]="!processing">
+    <GridLayout row="0" columns="*, 3*, 2*" marginTop="10">
+        <GridLayout col="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left" marginLeft="10">
+            </Image>
+        </GridLayout>
+        <GridLayout col="1" verticalAlignment="center"
+            horizontalAlignment="left">
+            <Label text="BIS Duel" class="title_duel">
+            </Label>
+        </GridLayout>
+        <StackLayout col="2" orientation="horizontal"
+            verticalAlignment="center" horizontalAlignment="right"
+            marginRight="10%">
+            <Image src="~/images/online_people.png" style="height:50%">
+            </Image>
+            <Label text="  2" class="online_players">
+            </Label>
+        </StackLayout>
+    </GridLayout>
+    <GridLayout row="1" rows="*,*,*,*,*,*,*" columns="*,*,*" width="80%"
+        height="80%" verticalAlignment="top">
+        <Label row="0" col="0" colSpan="3" text="Chose a chapter to play:"
+            class="titles">
+        </Label>
+        <Button row="1" col="0" marginBottom="10" marginLeft="0"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'1'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="1" col="1" marginBottom="10" marginLeft="5"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'2'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="1" col="2" marginBottom="10" marginLeft="5"
+            marginRight="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'3'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="2" col="0" marginBottom="10" marginLeft="0"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'4'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="2" col="1" marginBottom="10" marginLeft="5"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'5'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="2" col="2" marginBottom="10" marginLeft="5"
+            marginRight="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'6'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="3" col="0" marginBottom="10" marginLeft="0"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'7'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="3" col="1" marginBottom="10" marginLeft="5"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'8'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="3" col="2" marginBottom="10" marginLeft="5"
+            marginRight="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'9'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="4" col="0" marginBottom="10" marginLeft="0"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'10'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="4" col="1" marginBottom="10" marginLeft="5"
+            marginRight="5" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'11'"
+            (tap)="waitDelay()">
+        </Button>
+        <Button row="4" col="2" marginBottom="10" marginLeft="5"
+            marginRight="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'12'"
+            (tap)="waitDelay()">
+        </Button>
+        <!--random-->
+        <Label row="5" col="0" colSpan="2" text="Play a random chapter:"
+            class="titles" verticalAlignment="top">
+        </Label>
+        <Button row="5" col="2" marginBottom="10" marginLeft="5"
+            marginRight="0" horizontalAlignment="stretch"
+            class="eloha-font-semibold trial-exam-button" [text]="'Random'"
+            (tap)="waitDelay()">
+        </Button>
+    </GridLayout>
+    <ActivityIndicator [busy]="processing" rowSpan="2" opacity="0.5">
+    </ActivityIndicator>
+</GridLayout>

@@ -1,0 +1,13 @@
+This file provides general information about the relevant licenses for the application. For more detail refer to the individual repositories/websites.
+
+- Nativescript is licensed under the Apache 2.0 license.
+
+- Parts of the implementation of the simple questions, mini quiz, BIS duel and trial exam have been adapted from: https://github.com/williamjuan027/nativescript-quiz-demo
+
+- Bottombar used for the implementation of tabs in certain pages (e.g. selection_page) has been adapted from: https://github.com/williamjuan027/nativescript-ui-components/tree/master/bottombar-sliding-color
+
+- Login form has been adapted from: https://github.com/sajjaphani/nativescript-login-ng/tree/master
+
+- Images: The used icons are taken from https://material.io/resources/icons/?style=baseline
+
+*Note that this list is complete to my knowledge. Any missing references are not conciously or purpousfully left out. Please DO make me aware, if you find anything of that sort.*

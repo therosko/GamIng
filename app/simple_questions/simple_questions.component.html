@@ -1,0 +1,71 @@
+<!--https://github.com/williamjuan027/nativescript-quiz-demo#nativescript-quiz-demo-->
+
+<GridLayout rows="5*, 15*, 35*, 10*" columns="*, *, *"
+    backgroundColor="#ffffff" padding="15">
+
+    <!--Current question heading-->
+    <Label row="0" col="0" color="#000" fontSize="15" fontWeight="bold"
+        [text]="'QUESTION ' + (currentQuestionIndex + 1)">
+    </Label>
+    <Label row="0" col="1" color="#000" fontSize="15" fontWeight="bold"
+        text="END" horizontalAlignment="center" (tap)="end()"></Label>
+
+    <GridLayout row="0" col="2" (tap)="getHint()" marginBottom="10">
+        <Image src=" ~/images/hint.png" verticalAlignment="center"
+            horizontalAlignment="right" marginLeft="10">
+        </Image>
+    </GridLayout>
+
+    <!--Question-->
+    <GridLayout row="1" col="0" colSpan="3" backgroundColor="#ffffff"
+        margin="5" borderRadius="10">
+        <Label verticalAlignment="center" horizontalAlignment="center"
+            textAlignment="center" color="#000" fontSize="20"
+            fontWeight="bold" textWrap="true"
+            [text]="questions[currentQuestionIndex].question"></Label>
+    </GridLayout>
+
+    <!--Answers-->
+    <GridLayout *ngIf="questions" row="2" col="0" colSpan="3"
+        rows="*, *, *, *" marginBottom="30" verticalAlignment="top">
+        <GridLayout
+            *ngFor="let item of questions[currentQuestionIndex].options; let i = index"
+            [row]="i" height="70" margin="5" padding="5"
+            backgroundColor="#4446ff" borderRadius="20"
+            (tap)="selectAnswer(i, $event)">
+            <Label verticalAlignment="center" horizontalAlignment="center"
+                textAlignment="center" color="#fff" fontSize="13"
+                fontWeight="bold" textWrap="true" [text]="item"></Label>
+        </GridLayout>
+    </GridLayout>
+
+    <GridLayout row="3" col="0" colSpan="3" rows="*, 3*" columns="*,*,*"
+        padding="5" visibility="{{ showDetails ? 'visible' : 'collapsed' }}"
+        class="{{ checkCorrect ? 'greenColor' : 'redColor'}}">
+        <Label row="0" col="0" text="{{ checkCorrect ? 'Correct!' : 'Wrong'}}"
+            class="isCorrect">
+        </Label>
+        <!-- difficulty-->
+        <StackLayout row="0" col="1" colSpan="2" orientation="horizontal">
+            <Label text="Difficulty: ">
+            </Label>
+            <GridLayout backgroundColor="#EBEAEA" borderRadius="10"
+                margin="10 0" height="15">
+                <StackLayout horizontalAlignment="left" backgroundColor="#000"
+                    borderRadius="10" width="70%" height="15">
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <Button row="1" col="0" margin="5"
+            class="eloha-font-semibold trial-exam-button" [text]="'Comment'"
+            (tap)="getFeedback()">
+        </Button>
+        <Button row="1" col="2" margin="5"
+            class="eloha-font-semibold trial-exam-button" [text]="'Next'"
+            (tap)="goNext()">
+        </Button>
+
+    </GridLayout>
+
+</GridLayout>

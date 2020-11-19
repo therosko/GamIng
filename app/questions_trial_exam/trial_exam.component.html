@@ -1,0 +1,52 @@
+<!--https://github.com/williamjuan027/nativescript-quiz-demo#nativescript-quiz-demo-->
+
+<GridLayout rows="auto, auto, *, auto" columns="6*, 4*"
+    backgroundColor="#ffffff" padding="15">
+
+    <!--Current question heading-->
+    <Label row="0" col="0" color="#000" fontSize="15" fontWeight="bold"
+        [text]="'QUESTION ' + (currentQuestionIndex + 1) + '/' + questions.length">
+    </Label>
+    <Label row="0" col="1" color="#000" fontSize="15" fontWeight="bold"
+        text="END" (tap)="end()" horizontalAlignment="right" marginRight="10">
+    </Label>
+
+    <!--Progress bar-->
+    <GridLayout row="1" col="0" backgroundColor="#4A4A4A" height="20"
+        borderRadius="10" margin="10 0">
+        <StackLayout horizontalAlignment="left" backgroundColor="#B6EB81"
+            height="20" borderRadius="10"
+            [width]="(currentQuestionIndex * 100 / questions.length) + '%'">
+        </StackLayout>
+    </GridLayout>
+    <!--Times-->
+    <GridLayout row="1" col="1" verticalAlignment="center"
+        horizontalAlignment="right" marginRight="10">
+        <Label text="Time left: {{display_time}}" class="{{ checkYes ? 'redColor' : 'defaultColor'}}">
+        </Label>
+    </GridLayout>
+
+    <!--Question-->
+    <GridLayout row=" 2" col="0" colSpan="2" backgroundColor="#ffffff"
+            margin="5" borderRadius="10">
+            <Label verticalAlignment="center" horizontalAlignment="center"
+                textAlignment="center" color="#000" fontSize="20"
+                fontWeight="bold" textWrap="true"
+                [text]="questions[currentQuestionIndex].question"></Label>
+    </GridLayout>
+
+    <!--Answers-->
+    <GridLayout *ngIf="questions" row="3" col="0" colSpan="2"
+        rows="*, *, *, *">
+        <GridLayout
+            *ngFor="let item of questions[currentQuestionIndex].options; let i = index"
+            [row]="i" height="70" margin="5" padding="5"
+            backgroundColor="#4446ff" borderRadius="20"
+            (tap)="selectAnswer(i, $event)">
+            <Label verticalAlignment="center" horizontalAlignment="center"
+                textAlignment="center" color="#fff" fontSize="13"
+                fontWeight="bold" textWrap="true" [text]="item"></Label>
+        </GridLayout>
+    </GridLayout>
+
+</GridLayout>

@@ -1,0 +1,28 @@
+<GridLayout height="100" verticalAlignment="bottom">
+    <GridLayout columns="*, *, *, *" height="100" backgroundColor="#fff">
+        <!--GridLayout #tabHighlight col="0" backgroundColor="#F8A200"-->
+        <GridLayout #tabHighlight col="0" backgroundColor="#fff">
+        </GridLayout>
+        <GridLayout col="0" (tap)=confirmTrial() borderColor="#000">
+            <Image src="~/images/exam.png" width="80" height="80">
+            </Image>
+        </GridLayout>
+        
+        <GridLayout col="1" (tap)="selectTab(1)" borderColor="#000"
+            borderWidth="1">
+            <Image #image1 src="~/images/duel.png" height="75" width="75">
+            </Image>
+        </GridLayout>
+        <GridLayout col="2" (tap)="selectTab(2)" borderColor="#000"
+            borderWidth="1">
+            <Image #image2 src="~/images/quiz.png" height="80" width="80">
+            </Image>
+        </GridLayout>
+        <GridLayout col="3" (tap)="selectTab(3)" borderColor="#000"
+            borderWidth="1">
+            <Image #image3 src="~/images/exercise.png" height="80" width="80">
+            </Image>
+        </GridLayout>
+    </GridLayout>
+
+</GridLayout>

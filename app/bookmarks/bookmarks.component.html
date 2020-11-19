@@ -1,0 +1,187 @@
+<GridLayout rows="6*, *">
+    <GridLayout row="0" rows="3*, 2*, *, 2*, *, 16*, 2*" height="100%">
+        <!-- Header -->
+        <GridLayout row="0" rows="2*,*" columns="*, 2*, 5*, *" marginRight="20"
+            marginLeft="20" marginTop="10">
+            <Image src="~/images/bookmarks.png" col="1"
+                class="home-icon-container" horizontalAlignment="right"
+                verticalAlignment="bottom" marginTop="5">
+            </Image>
+            <Label col="2" text="Bookmarks" marginLeft="20"
+                class="home-eloha-font-semibold" horizontalAlignment="left"
+                verticalAlignment="bottom">
+            </Label>
+            <GridLayout row="1" col="0" colSpan="3">
+                <Label class="line"></Label>
+            </GridLayout>
+        </GridLayout>
+
+        <!-- List Picker -->
+        <ListPicker row="1" [items]="listPickerChapters"
+            [(ngModel)]="selectedListPickerIndex" width="80%" class="picker">
+        </ListPicker>
+
+        <!--Line-->
+        <GridLayout row="2" col="0" colSpan="3">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <!-- Select from three options-->
+        <GridLayout row="3" columns="*,*,*">
+            <GridLayout col="0" class="home-icon-container" horizontalAlignment="right" verticalAlignment="bottom">
+                <Image src="~/images/mynotes.png"
+                class="home-icon-container">
+                </Image>
+            </GridLayout>
+            <GridLayout col="1" class="home-icon-container" horizontalAlignment="center" verticalAlignment="bottom">
+                <Image src="~/images/bookmarks.png"
+                class="home-icon-container">
+                </Image>
+            </GridLayout>
+            <GridLayout col="2" class="home-icon-container" horizontalAlignment="left" verticalAlignment="bottom">
+                <Image src="~/images/delete.png"
+                class="home-icon-container">
+                </Image>
+            </GridLayout>
+        </GridLayout>
+
+        <!--Line-->
+        <GridLayout row="4" col="0" colSpan="3">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <!-- Content row 0 title and icons, row 1 text -->
+        <GridLayout row="5" columns="7*,*,*,*" rows="*,2*,*,2*,*,2*,*" width="80%"
+        marginTop="15">
+            <GridLayout row="0" col="0" backgroundColor="#ffffff">
+                <Label
+                    text="1.2 Digitalisierung"
+                    textWrap="true" class="bookmark_title">
+                </Label>
+            </GridLayout>
+            <GridLayout row="0" , col="1" marginLeft="15">
+                <Image src="~/images/mynotes.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="0" , col="2" marginLeft="15">
+                <Image src="~/images/bookmark.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="0" , col="3" marginLeft="15">
+                <Image src="~/images/delete.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="1" col="0" backgroundColor="#ffffff">
+                <Label
+                    text="Ein Istprozessmodell beschreibt einen Geschäftsprozess so, wie er aktuell tatsächlich von den Prozessteilnehmern a usgeführt wird (Hansen et. al, 2019, S. 111)."
+                    textWrap="true" class="feedback_text">
+                </Label>
+            </GridLayout>
+
+            <GridLayout row="2" col="0" backgroundColor="#ffffff" marginTop="10">
+                <Label
+                    text="1.3 Lorem Ipsum"
+                    textWrap="true" class="bookmark_title">
+                </Label>
+            </GridLayout>
+            <GridLayout row="2" , col="1" marginLeft="15">
+                <Image src="~/images/mynotes.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="2" , col="2" marginLeft="15">
+                <Image src="~/images/bookmark_empty.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="2" , col="3" marginLeft="15">
+                <Image src="~/images/delete.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="3" col="0" backgroundColor="#ffffff">
+                <Label
+                    text="Ein Istprozessmodell beschreibt einen Geschäftsprozess so, wie er aktuell tatsächlich von den Prozessteilnehmern a usgeführt wird (Hansen et. al, 2019, S. 111)."
+                    textWrap="true" class="feedback_text">
+                </Label>
+            </GridLayout>
+
+            <GridLayout row="4" col="0" backgroundColor="#ffffff" marginTop="10">
+                <Label
+                    text="1.5 Dolor Sit Amet"
+                    textWrap="true" class="bookmark_title">
+                </Label>
+            </GridLayout>
+            <GridLayout row="4" , col="2" marginLeft="15">
+                <Image src="~/images/bookmark.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="4" , col="3" marginLeft="15">
+                <Image src="~/images/delete.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="5" col="0" backgroundColor="#ffffff">
+                <Label
+                    text="Ein Istprozessmodell beschreibt einen Geschäftsprozess so, wie er aktuell tatsächlich von den Prozessteilnehmern a usgeführt wird (Hansen et. al, 2019, S. 111)."
+                    textWrap="true" class="feedback_text">
+                </Label>
+            </GridLayout>
+        </GridLayout>
+
+
+    </GridLayout>
+
+
+    <!-- Bootom Selection-->
+    <GridLayout row="1" rows="*, 7*, 3*">
+        <GridLayout row="0">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <GridLayout row="1" columns="*,*,*,*,*">
+            <GridLayout col="0" class="home-icon-container"
+                (tap)="navigateToHome()" verticalAlignment="top">
+                <Image src="~/images/mygraph.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="1" class="home-icon-container" verticalAlignment="top">
+                <Image src="~/images/book.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="2" class="home-icon-container"
+                (tap)="navigateToRecommendations()" verticalAlignment="top">
+                <Image src="~/images/recommendations.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="3" class="home-icon-container"
+                (tap)="navigateToQuestion()" verticalAlignment="top">
+                <Image src="~/images/question_page.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="4" class="home-icon-container"
+                (tap)="navigateToSetting()" verticalAlignment="top">
+                <Image src="~/images/settings.png">
+                </Image>
+            </GridLayout>
+        </GridLayout>
+
+        <GridLayout row="2" columns="*,*,*,*,*">
+            <Label col="0" text="My Graph"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="1" text="Bookmark"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="2" text="Advice"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="3" text="Question"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="4" text="Settings"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+        </GridLayout>
+
+    </GridLayout>
+
+
+
+</GridLayout>

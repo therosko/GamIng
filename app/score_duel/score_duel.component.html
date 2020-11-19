@@ -1,0 +1,144 @@
+<GridLayout rows="7*, *">
+    <GridLayout row="0" rows="3*, 2*, *, 2*, *, 7*, *, 9*" height="100%" width="95%">
+        <!-- Header -->
+        <GridLayout row="0" rows="2*,*" columns="*, 5*" marginTop="10">
+            <GridLayout col="0" row="0" class="home-icon-container"
+            (tap)="navigateToHome()">
+                <Image src=" ~/images/back.png" style="height:50%"
+                    horizontalAlignment="center" verticalAlignment="bottom">
+                </Image>
+            </GridLayout>
+            <Label row="0" col="0" colSpan="2" text="MyResult" marginLeft="20"
+                class="home-eloha-font-semibold" horizontalAlignment="center"
+                verticalAlignment="bottom">
+            </Label>
+            <GridLayout row="1" col="0" colSpan="2">
+                <Label class="line"></Label>
+            </GridLayout>
+        </GridLayout>
+
+        <!-- Level Points -->
+        <GridLayout row="1" rows="3*,*" columns="*,*,*">
+            <Gridlayout col="0" row="0" (tap)="navigateToLevels()">
+                <Image src=" ~/images/levels.png" style="height:75%"
+                horizontalAlignment="right" verticalAlignment="bottom">
+                </Image>
+            </Gridlayout>
+            <Gridlayout col="2" row="0" (tap)="navigateToLeaderboard()">
+                <StackLayout orientation="horizontal">
+                    <Image src=" ~/images/coins.png" style="height:75%"
+                    horizontalAlignment="left" verticalAlignment="bottom">
+                    </Image>
+                    <Label text="99" class="nickname_duel" verticalAlignment="center">
+                    </Label>
+                </StackLayout>
+            </Gridlayout>
+            <Gridlayout col="0" row="1" (tap)="navigateToLevels()">
+                <Label text="Level" horizontalAlignment="right" verticalAlignment="bottom">
+                </Label>
+            </Gridlayout>
+            <Gridlayout col="2" row="1" (tap)="navigateToLeaderboard()">
+                <Label text="Points" horizontalAlignment="left" verticalAlignment="bottom">
+                </Label>
+            </Gridlayout>
+
+        </GridLayout>
+
+        <!--Line-->
+        <GridLayout row="2">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <GridLayout row="3" columns="3*,2*,2*,2*">
+            <Image col="1" src="~/images/winner.png" style="height:60%"
+            horizontalAlignment="center" verticalAlignment="bottom">
+            </Image>
+            <Label col="2" text="Dana" class="nickname_duel" horizontalAlignment="left" verticalAlignment="bottom">
+            </Label> 
+            <Label col="3" text="Duelist" class="nickname_duel" horizontalAlignment="left" verticalAlignment="bottom">
+            </Label> 
+        </GridLayout>
+
+        <!--Line-->
+        <GridLayout row="4">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <GridLayout row="5" rows="*,*,*" columns="2*,*,*" width="95%">
+            <Label row="0" col="0" text="Correct answers" wrapText="true" verticalAlignment="center" style="font-size: 20;">
+            </Label>
+            <Button row="0" col="1" class="points" marginLeft="10" marginRight="10"
+                horizontalAlignment="center"
+                [text]="'+5'">
+            </Button>
+            <Button row="0" col="2" class="points" marginLeft="10" marginRight="10"
+                horizontalAlignment="center"
+                [text]="'+3'">
+
+            </Button>
+            <Label row="1" col="0" text="Quicker answers" wrapText="true" verticalAlignment="center" style="font-size: 20;">
+            </Label>
+            <Button row="1" col="1" class="points" marginLeft="10" marginRight="10"
+                horizontalAlignment="center"
+                [text]="'+2'">
+            </Button>
+            <Button row="1" col="2" class="points" marginLeft="10" marginRight="10"
+                horizontalAlignment="center"
+                [text]="'+3'">
+            </Button>
+
+            <Label row="2" col="0" text="Winner" wrapText="true" verticalAlignment="center" style="font-size: 20;">
+            </Label>
+            <Button row="2" col="1" class="points" marginLeft="10" marginRight="10"
+                horizontalAlignment="center"
+                [text]="'+5'">
+            </Button>
+        </GridLayout>
+
+        <!--Line-->
+        <GridLayout row="6">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <Image row="7" src="~/images/chapter_pg_sq.png" width="80%" 
+        verticalAlignment="bottom" marginTop="15">
+    </Image>
+
+            
+
+
+    </GridLayout>
+
+
+    <!-- Bootom Selection-->
+    <GridLayout row="1" rows="*, 8*">
+        <GridLayout row="0">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <GridLayout row="1" columns="*,*,*,*" (tap)="navigateToSelectionPage()">
+            <GridLayout col="0" class="home-icon-container"
+                (tap)="navigateToHome()" verticalAlignment="top">
+                <Image src="~/images/exam.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="1" class="home-icon-container" verticalAlignment="top">
+                <Image src="~/images/duel.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="2" class="home-icon-container"
+                (tap)="navigateToRecommendations()" verticalAlignment="top">
+                <Image src="~/images/quiz.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="3" class="home-icon-container"
+                (tap)="navigateToQuestion()" verticalAlignment="top">
+                <Image src="~/images/exercise.png">
+                </Image>
+            </GridLayout>
+        </GridLayout>
+    </GridLayout>
+
+
+
+</GridLayout>

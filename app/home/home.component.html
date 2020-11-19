@@ -1,0 +1,102 @@
+<GridLayout rows="6*, *">
+    <GridLayout row="0" rows="3*, *, 3*, *, 20* ">
+        <!-- Header -->
+        <GridLayout row="0" rows="2*,*" columns="*, 2*, 5*, *" marginRight="20"
+            marginLeft="20" marginTop="10">
+            <Label col="0" colSpan="4" text="My Graph" marginLeft="20"
+                class="home-eloha-font-semibold" horizontalAlignment="center"
+                verticalAlignment="bottom">
+            </Label>
+        </GridLayout>
+
+        <GridLayout row="1" style="padding-bottom:15">
+            <Label class="line"></Label>
+        </GridLayout>
+    
+        <GridLayout row="2" columns="*,*,*">
+            <Gridlayout col="0" (tap)="navigateToLevels()">
+                <Image src=" ~/images/levels.png" style="height:50%"
+                horizontalAlignment="right">
+                </Image>
+            </Gridlayout>
+            <Gridlayout col="2" (tap)="navigateToLeaderboard()">
+                <Image src=" ~/images/coins.png" style="height:50%"
+                horizontalAlignment="left">
+                </Image>
+            </Gridlayout>
+        </GridLayout>
+
+        <GridLayout row="3" style="padding-bottom:15">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <GridLayout row="4" rows="8*, *" columns="5*, *">
+            <GridLayout row="0" rowSpan="2" col="0" colSpan="2" verticalAlignment="stretch"
+            marginLeft="10%" marginTop="10%" (tap)="navigateToSelectionPage()">
+                <Image src="~/images/graph.png">
+                </Image>
+            </GridLayout>
+            <GridLayout row="1" col="1">
+                <Image src="~/images/question.png" marginRight='15'
+                        marginBottom="15"> </Image>
+            </GridLayout>
+        </GridLayout>
+  
+    </GridLayout>
+
+
+
+    <!-- Bootom Selection same as bookmarks-->
+    <GridLayout row="1" rows="*, 7*, 3*">
+        <GridLayout row="0">
+            <Label class="line"></Label>
+        </GridLayout>
+
+        <GridLayout row="1" columns="*,*,*,*,*">
+            <GridLayout col="0" class="home-icon-container"
+                (tap)="navigateToHome()" verticalAlignment="top">
+                <Image src="~/images/mygraph.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="1" class="home-icon-container" (tap)="navigateToBookmarks()" verticalAlignment="top">
+                <Image src="~/images/book.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="2" class="home-icon-container"
+                (tap)="navigateToRecommendations()" verticalAlignment="top">
+                <Image src="~/images/recommendations.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="3" class="home-icon-container"
+                (tap)="navigateToQuestion()" verticalAlignment="top">
+                <Image src="~/images/question_page.png">
+                </Image>
+            </GridLayout>
+            <GridLayout col="4" class="home-icon-container"
+                (tap)="navigateToSetting()" verticalAlignment="top">
+                <Image src="~/images/settings.png">
+                </Image>
+            </GridLayout>
+        </GridLayout>
+
+        <GridLayout row="2" columns="*,*,*,*,*">
+            <Label col="0" text="My Graph"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="1" text="Bookmark"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="2" text="Advice"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="3" text="Question"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+            <Label col="4" text="Settings"
+            textWrap="true" verticalAlignment="bottom" horizontalAlignment="center">
+            </Label>
+        </GridLayout>
+
+    </GridLayout>
+
+</GridLayout>

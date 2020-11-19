@@ -1,0 +1,57 @@
+<GridLayout rows="*, 8*" class="home-container">
+    <StackLayout row="0" columns="auto, auto, auto">
+        <GridLayout column="0" (tap)="navigateToHome()"
+            class="home-icon-container">
+            <Image src="~/images/back.png" horizontalAlignment="left">
+            </Image>
+        </GridLayout>
+        <Image src="~/images/settings.png" class="home-icon-container"
+            horizontalAlignment="left">
+        </Image>
+        <Label col="1" text="Settings" marginLeft="20"
+            class="home-eloha-font-semibold" horizontalAlignment="left">
+        </Label>
+    </StackLayout>
+    <Label class="line"></Label>
+    <GridLayout row=" 1" rows="*,*,*" marginTop="5">
+        <GridLayout row="0" rows="*,*,*" columns="7*,*">
+            <Label row="0" text="General" class="settings-title-bold">
+            </Label>
+            <Label row="1" col="0" text="Sound effects"
+                class="eloha-font-semibold">
+            </Label>
+            <Switch checked="true"></Switch>
+
+        </GridLayout>
+        <GridLayout row=" 1" rows="*,*,*,*" columns="7*,*">
+        </GridLayout>
+        <GridLayout row="2" columns="7*,*">
+            <GridLayout col="0" rows="*,*"
+                [ngClass]="{'input-field-error': hasNicknameErrors()}">
+                <TextField #nickname row="0"
+                    class="eloha-font-semibold login-password-field"
+                    hint="Password" android:style="padding-left: 10"
+                    secure="true" [(ngModel)]="user.nickname"
+                    (focus)="onNicknameFocus()"
+                    [ngClass]="{'font-size-md': !isTablet(), 'font-size-md-tablet': isTablet()}">
+                </TextField>
+                <Label *ngIf="hasNicknameErrors()" row="1"
+                    class="eloha-font-semibold m-t-2 login-field-label color-danger" [text]="getNicknameError()"
+                    [ngClass]="{'font-size-md': !isTablet(), 'font-size-md-tablet': isTablet()}">
+                </Label>
+            </GridLayout>
+            <GridLayout col="1" rows="*,*">
+                <Button row="0"
+                    class="eloha-font-semibold login-submit"
+                    [text]="'Change'" (tap)="navigateToHome()"
+                    [ngClass]="{'font-size-lg': !isTablet(), 'font-size-lg-tablet': isTablet()}">
+                </Button>
+                <Label *ngIf="hasNicknameErrors()"
+                    class="eloha-font-semibold color-danger" row="1"
+                    [text]="getNicknameError()" textWrap="true"
+                    [ngClass]="{'font-size-md': !isTablet(), 'font-size-md-tablet': isTablet()}">
+                </Label>
+            </GridLayout>
+        </GridLayout>
+    </GridLayout>
+</GridLayout>

@@ -1,0 +1,90 @@
+<GridLayout rows="3*, *, 32*" class="home-container" marginRight="20"
+    marginLeft="20">
+
+    <GridLayout row="0" columns="*, *, 5*" marginTop="10">
+        <GridLayout col="0" class="home-icon-container"
+            (tap)="navigateToScore()" verticalAlignment="bottom">
+            <Image src=" ~/images/back.png" style="height:50%"
+                horizontalAlignment="left">
+            </Image>
+        </GridLayout>
+        <GridLayout col="1" (tap)="navigateToHome()">
+            <Label text="Question 1" class="levels-points"
+            horizontalAlignment="left" verticalAlignment="bottom">
+            </Label>
+        </GridLayout>
+        <Label col="2" text="Solution" marginLeft="20"
+            class="home-eloha-font-semibold" horizontalAlignment="left"
+            verticalAlignment="bottom">
+        </Label>
+    </GridLayout>
+
+    <GridLayout row="1">
+        <Label class="line"></Label>
+    </GridLayout>
+
+
+    <GridLayout row="2" columns="7*,*,*" rows="2*,2*,2*,2*,*" marginTop="15">
+        <GridLayout row="0">
+            <Label
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                    textWrap="true" class="feedback_text">
+            </Label>
+        </GridLayout>
+        <GridLayout row="0" , col="1" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/mynotes.png">
+            </Image>
+        </GridLayout>
+        <GridLayout row="0" , col="2" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/bookmarks.png">
+            </Image>
+        </GridLayout>
+
+        <GridLayout row="1">
+            <Label
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                    textWrap="true" class="feedback_text">
+            </Label>
+        </GridLayout>
+        <GridLayout row="1" , col="1" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/mynotes.png">
+            </Image>
+        </GridLayout>
+        <GridLayout row="1" , col="2" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/bookmarks.png">
+            </Image>
+        </GridLayout>
+
+        <GridLayout row="2">
+            <Label
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                    textWrap="true" class="feedback_text">
+            </Label>
+        </GridLayout>
+        <GridLayout row="2" , col="1" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/mynotes.png">
+            </Image>
+        </GridLayout>
+        <GridLayout row="2" , col="2" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/bookmarks.png">
+            </Image>
+        </GridLayout>
+
+        <GridLayout row="3">
+            <Label
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                    textWrap="true" class="feedback_text">
+            </Label>
+        </GridLayout>
+        <GridLayout row="3" , col="1" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/mynotes.png">
+            </Image>
+        </GridLayout>
+        <GridLayout row="3" , col="2" marginLeft="15" class="home-icon-container">
+            <Image src="~/images/bookmarks.png">
+            </Image>
+        </GridLayout>
+
+    </GridLayout>
+
+</GridLayout>
