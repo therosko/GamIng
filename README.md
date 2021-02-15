@@ -1,7 +1,7 @@
 <img src="https://nm.wu.ac.at/nm/download/file/en:gaming/logo?geometry=50x50?revision_id=1870807" width="200">
 
 ## General
-GamIng (Gamification for Teaching and Learning) is a small project funded by the vice-rector for Academic Programs and Student Affairs at the [Vienna University of Business and Economics (WU)](https://www.wu.ac.at) and conducted by the [Institute of Information Systems and New Media](https://nm.wu.ac.at/nm/). The project's goal is to developing a prototype of a serious game for learning. The targeted course is on the subject of Business Information Systems (BIS). BIS is a course taken by most students of the univerisy in the first or second year of their Bachelors.
+GamIng (Gamification for Teaching and Learning) is a small project funded by the vice-rector for Academic Programs and Student Affairs at the [Vienna University of Business and Economics (WU)](https://www.wu.ac.at) and conducted by the [Institute of Information Systems and New Media](https://nm.wu.ac.at/nm/) in 2019-2020. The project's goal is to develop a prototype of a serious game for learning. The targeted course is on the subject of Business Information Systems (BIS). BIS is a course taken by most students of the univerisy in the first or second year of their Bachelors.
 
 The initial prototype of the game has been created based on a requirement analysis and a workshop with students, who have previously taken the BIS course. It serves as a "proof of concept" and will be used for further workshops and evaluations.
 
